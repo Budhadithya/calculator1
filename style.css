@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #68a2ff, white, #fbade8);
+}
+
+.calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 85px);
+    grid-template-rows:  minmax(110px ,auto) repeat(5, 85px);
+    
+}
+
+.calculator-grid > button{
+    
+    cursor: pointer;
+    font-size: medium;
+    font-style: oblique;
+    font-weight: bold;
+    border: none;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgb(129, 202, 236, .75);
+}
+
+.calculator-grid > button:hover{
+    background-color: rgb(178, 255, 255, 0.9);
+}
+
+.calculator-grid > button.Ac{
+    background-color: rgba(255, 0, 85, 0.8);
+    color: white;
+    cursor: pointer;
+    font-size: medium;
+    font-style: oblique;
+    font-weight: bold;
+    border: none;
+    border: 1px solid white;
+    outline: none;
+}
+.calculator-grid > button.Ac:hover{
+    background-color: rgba(255, 0, 85);
+    color: white;
+}
+
+.calculator-grid > button.Equals{
+    background-color: rgb(52, 252, 13, .9);
+    color: white;
+    cursor: pointer;
+    font-size: medium;
+    font-style: oblique;
+    font-weight: bold;
+    border: none;
+    border: 1px solid white;
+    outline: none;
+}
+.calculator-grid > button.Equals:hover{
+    background-color: rgb(42, 250, 0);
+    color: white;
+}
+
+.Equals{
+    grid-column: span 2;
+}
+
+.Output{
+    grid-column: span 4;
+    background-color: rgba(5, 55, 88, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 10px;
+}
+
+.previous-operand{
+    color: rgb(167, 248, 210);
+    font-size: 20px;
+}
+.current-operand{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
